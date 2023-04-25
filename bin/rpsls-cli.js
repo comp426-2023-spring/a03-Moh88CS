@@ -8,10 +8,6 @@ const args = minimist(process.argv.slice(2));
 const validChoices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 processArgs(rpsls, 'node-rpsls', validChoices, args);
 
-if (process.argv[2] === undefined) {
-  console.error("Please provide a valid move: Rock, Paper, Scissors, Lizard, or Spock.");
-  process.exit(1);
-}
 
 
 function processArgs(gameFunction, commandName, validChoices, args) {
@@ -26,8 +22,8 @@ function processArgs(gameFunction, commandName, validChoices, args) {
   }
 
   try {
-    const playerChoice = args._[0] || gameFunction();
-    const gameResult = gameFunction(playerChoice);
+    const playerChoice = args._[0];
+    const gameResult = playerChoice ? gameFunction(playerChoice) : gameFunction(null, true);
     console.log(JSON.stringify(gameResult));
   } catch (error) {
     console.error(error.message);
