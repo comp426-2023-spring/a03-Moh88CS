@@ -20,13 +20,13 @@ node-rpsls rock Return JSON with results for RPSLS played against a simulated op
 e.g {"player":"rock","opponent":"Spock","result":"lose"}
 `;
 
-if (args.includes('-h') || args.includes('--help')) {
+if (args.h || args.help) {
   console.log(helpMessage);
   process.exit(0);
 }
 
-if (args.includes('-r') || args.includes('--rules')) {
-console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
+if (args.r || args.rules) {
+  console.log(`Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
 
 Scissors CUTS Paper
 Paper COVERS Rock
@@ -38,8 +38,9 @@ Lizard EATS Paper
 Paper DISPROVES Spock
 Spock VAPORIZES Rock
 Rock CRUSHES Scissors`);
-process.exit(0);
+  process.exit(0);
 }
+
 const result = rpsls(shot);
 console.log(JSON.stringify(result));
 
