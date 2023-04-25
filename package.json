@@ -2,6 +2,7 @@
   "name": "node-rpsls",
   "version": "1.0.0",
   "description": "Rock-Paper-Scissors game",
+  "type": "module",
   "main": "./lib/rpsls.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
