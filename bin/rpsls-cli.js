@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // bin/rpsls-cli.js
-import { rpsls } from '../lib/rpsls.js';
+import { rpsls, getRandomChoice } from '../lib/rpsls.js';
 import minimist from 'minimist';
 
 const args = minimist(process.argv.slice(2));
