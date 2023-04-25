@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // bin/rps-cli.js
-import { rps, getRandomChoice } from '../lib/rpsls.js';
+import { rps } from '../lib/rpsls.js';
 import minimist from 'minimist';
 
 const args = minimist(process.argv.slice(2));
@@ -23,9 +23,8 @@ function processArgs(gameFunction, commandName, validChoices, args) {
   
 
   try {
-    const playerChoice = args._[0] || getRandomChoice(validChoices);
-    const gameResult = playerChoice ? gameFunction(playerChoice) : gameFunction(null, true);
-    console.log(JSON.stringify(gameResult));
+    const playerChoice = args._[0]
+    console.log(JSON.stringify(rps(playerChoice)));
   } catch (error) {
     console.error(error.message);
     displayHelp(commandName);

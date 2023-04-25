@@ -22,9 +22,8 @@ function processArgs(gameFunction, commandName, validChoices, args) {
   }
 
   try {
-    const playerChoice = args._[0] || getRandomChoice(validChoices);
-    const gameResult = playerChoice ? gameFunction(playerChoice) : gameFunction(null, true);
-    console.log(JSON.stringify(gameResult));
+    const playerChoice = args._[0]
+    console.log(JSON.stringify(rpsls(playerChoice)));
   } catch (error) {
     console.error(error.message);
     displayHelp(commandName);
