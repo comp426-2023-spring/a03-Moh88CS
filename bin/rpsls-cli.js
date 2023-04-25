@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-// bin/rpsls-cli.js
 import { rpsls } from '../lib/rpsls.js';
 import minimist from 'minimist';
 
 const args = minimist(process.argv.slice(2));
-const shot = args._[0]
+const shot = args._[0];
+
 const helpMessage = `
 Usage: node-rpsls [SHOT]
 Play the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!
@@ -21,8 +21,8 @@ e.g {"player":"rock","opponent":"Spock","result":"lose"}
 `;
 
 if (args.includes('-h') || args.includes('--help')) {
-console.log(helpMessage);
-process.exit(0);
+  console.log(helpMessage);
+  process.exit(0);
 }
 
 if (args.includes('-r') || args.includes('--rules')) {
