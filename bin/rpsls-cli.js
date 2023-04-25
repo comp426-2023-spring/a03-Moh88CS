@@ -56,5 +56,6 @@ function displayRules() {
   - Rock CRUSHES Scissors`) 
 }
 
-let input = process.argv[2].toLowerCase();
+let input = process.argv[2];
+input = input.toLowerCase();
 
