@@ -10,7 +10,7 @@ processArgs(rpsls, 'node-rpsls', validChoices, args);
 
 
 
-function processArgs(gameFunction, commandName, validChoices, args) {
+function processArgs(commandName, args) {
   if (args.h || args.help) {
     displayHelp(commandName);
     process.exit(0);
