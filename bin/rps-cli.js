@@ -23,6 +23,7 @@ function processArgs(gameFunction, commandName, validChoices, args) {
     displayRules();
     process.exit(0);
   }
+  
 
   try {
     const playerChoice = args._[0] || gameFunction();
@@ -43,3 +44,7 @@ function displayHelp(commandName) {
 function displayRules() {
   console.log(`Rules for Rock Paper Scissors:\n\n  - Scissors CUTS Paper\n  - Paper COVERS Rock\n  - Rock CRUSHES Scissors`);
 }
+
+let input = process.argv[2].toLowerCase();
+
+

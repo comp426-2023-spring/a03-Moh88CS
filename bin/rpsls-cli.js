@@ -55,3 +55,6 @@ function displayRules() {
   - Spock VAPORIZES Rock
   - Rock CRUSHES Scissors`) 
 }
+
+let input = process.argv[2].toLowerCase();
+
