@@ -23,7 +23,7 @@ function processArgs(gameFunction, commandName, validChoices, args) {
   
 
   try {
-    const playerChoice = args._[0];
+    const playerChoice = args._[0] || getRandomChoice(validChoices);
     const gameResult = playerChoice ? gameFunction(playerChoice) : gameFunction(null, true);
     console.log(JSON.stringify(gameResult));
   } catch (error) {
